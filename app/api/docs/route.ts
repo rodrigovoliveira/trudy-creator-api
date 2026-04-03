@@ -11,6 +11,8 @@ export async function GET(request: Request) {
     description:
       "Proxy para o endpoint Trudy (completeInfo Instagram), agregando o stream SSE em JSON.",
     baseUrl: origin,
+    openApiUrl: `${origin}/api/openapi`,
+    docsUiUrl: `${origin}/docs`,
     environmentVariables: {
       TRUDY_BRAND_ID: "ID da marca no Trudy (ex.: brnd_...)",
       TRUDY_TOKEN: "JWT de sessão (Clerk), o mesmo contexto da extensão Trudy",
@@ -61,8 +63,20 @@ export async function GET(request: Request) {
       },
       {
         method: "GET",
+        path: "/api/openapi",
+        description: "Especificação OpenAPI 3 (para Swagger, codegen, Postman).",
+        example: `${origin}/api/openapi`,
+      },
+      {
+        method: "GET",
+        path: "/docs",
+        description: "Documentação interativa (Swagger UI) — mais fácil de ler que JSON puro.",
+        example: `${origin}/docs`,
+      },
+      {
+        method: "GET",
         path: "/api/docs",
-        description: "Esta documentação em JSON.",
+        description: "Esta documentação em JSON (formato legado / resumo).",
         example: `${origin}/api/docs`,
       },
     ],
