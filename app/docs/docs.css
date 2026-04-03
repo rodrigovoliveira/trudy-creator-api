@@ -1,0 +1,13 @@
+/**
+ * Swagger UI 5 segue prefers-color-scheme: dark e fica ilegível com body escuro do globals.css.
+ * Forçamos esquema claro na página de docs.
+ */
+.swagger-ui {
+  color-scheme: light !important;
+}
+
+/* Garante fundo e texto legíveis na rota /docs */
+body:has(#swagger-ui-root) {
+  background: #fafafa !important;
+  color: #171717 !important;
+}

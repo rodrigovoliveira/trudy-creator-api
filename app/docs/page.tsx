@@ -41,10 +41,5 @@ export default function OpenApiDocsPage() {
     };
   }, []);
 
-  return (
-    <div
-      id="swagger-ui-root"
-      className="min-h-screen bg-white dark:bg-[#1a1a1a]"
-    />
-  );
+  return <div id="swagger-ui-root" className="min-h-dvh w-full" />;
 }
