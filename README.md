@@ -88,10 +88,12 @@ git push -u origin main
 4. No projeto: **Settings → Environment Variables** → adicione `TRUDY_BRAND_ID` e `TRUDY_TOKEN` para **Production** (e **Preview** se quiser testar PRs). Salve.
 5. **Deployments** → nos três pontos do último deploy → **Redeploy** (para aplicar as variáveis).
 
+Produção: [https://trudy-creator-api.vercel.app](https://trudy-creator-api.vercel.app/) (página inicial = template Next.js; a API fica em `/api/creator`).
+
 Teste em produção:
 
 ```http
-GET https://SEU_PROJETO.vercel.app/api/creator?username=USUARIO_INSTAGRAM
+GET https://trudy-creator-api.vercel.app/api/creator?username=USUARIO_INSTAGRAM
 ```
 
 ### CLI (opcional)
